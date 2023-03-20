@@ -1,12 +1,19 @@
 import React, { Component, useEffect, useState } from "react";
 
 
-const RecipeChoices = ({handleChange, label, choices, checked}) => {
+const RecipeChoices = ({handleChange, label, choices}) => {
 
     return (
       <div>
         <div className="radio-buttons">
-          {choices &&
+            <input
+              type="text"
+              name={label}
+              placeholder="Guess the ingredient..."
+              onChange={handleChange}
+              className = "textbox"
+            />
+          {/* {choices &&
             choices.map((choice) => (
               <li key={choice}>
                 <input
@@ -15,11 +22,18 @@ const RecipeChoices = ({handleChange, label, choices, checked}) => {
                   name={label}
                   type="radio"
                   onChange={handleChange}
-                  checked={checked == choice}
                 />
                  {choice}
               </li>
-            ))}
+            ))} */}
+          {choices &&
+          choices.map((choice) => (
+            <li key={choice}>
+              
+              {choice}
+              
+            </li>
+          ))}
         </div>
       </div>
     );

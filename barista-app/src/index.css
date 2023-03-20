@@ -22,9 +22,10 @@ li {
 }
 
 .mini-container {
-  display: flex;
+  display: flexbox;
   justify-content: space-evenly;
   flex-direction: column;
+  width: 250px;
   margin: 25px;
   padding: 15px;
   border-radius: 15px;
