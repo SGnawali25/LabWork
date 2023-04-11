@@ -13,7 +13,7 @@ const APIForm = ({inputs, handleChange, onSubmit}) => {
       <div>
         <h2> Select Your Image Attributes: </h2>
         <form className="form-container">
-            {inputs &&
+            {inputs && 
             Object.entries(inputs).map(([category, value], index) => (
             <li className="form" key={index}>
                 <h2>{category} </h2>
@@ -31,6 +31,7 @@ const APIForm = ({inputs, handleChange, onSubmit}) => {
             </li>
             ))}
         </form>
+        
         <button type="submit" className="button" onClick={onSubmit}>
             Take that Pic! 🎞
         </button>
